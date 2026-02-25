@@ -5,17 +5,20 @@ import { SiteHeader } from '@/components/SiteHeader';
 
 export const metadata: Metadata = {
   title: {
-    default: 'SaaS Affiliate SEO Site',
-    template: '%s | SaaS Affiliate SEO Site',
+    default: "Oryvalo — AI Tools & Online Business Guides",
+    template: "%s | Oryvalo",
   },
-  description: 'SEO-first content site for SaaS affiliate marketing.',
-  metadataBase: new URL('https://example.com'),
-  alternates: { canonical: '/' },
+  description:
+    "Learn how to make money online using AI tools. Step-by-step guides, tutorials, and software recommendations for beginners and creators.",
+  metadataBase: new URL("https://oryvalo.com"),
+  alternates: { canonical: "/" },
   openGraph: {
-    type: 'website',
-    title: 'SaaS Affiliate SEO Site',
-    description: 'SEO-first content site for SaaS affiliate marketing.',
-    url: 'https://example.com',
+    type: "website",
+    title: "Oryvalo — AI Tools & Online Business Guides",
+    description:
+      "Beginner-friendly tutorials on AI tools, faceless YouTube, automation, and online business ideas.",
+    url: "https://oryvalo.com",
+    siteName: "Oryvalo",
   },
 };
 
