@@ -89,13 +89,12 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
 
   // Build-time compilation of trusted local MDX.
   const compiled = await compileMDX({
-    source: mdxSource,
-    options: {
-      parseFrontmatter: false,
-      mdxOptions: {},
-      },
-    },
-  });
+  source: mdxSource,
+  options: {
+    parseFrontmatter: false,
+    mdxOptions: {},
+  }
+});
 
   return {
     slug,
