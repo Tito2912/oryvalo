@@ -92,11 +92,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     source: mdxSource,
     options: {
       parseFrontmatter: false,
-      mdxOptions: {
-        // Security: block JS in MDX compilation
-        // (next-mdx-remote v6 defaults are safe; we keep it explicit)
-        blockDangerousJS: true,
-        blockJS: true,
+      mdxOptions: {},
       },
     },
   });
