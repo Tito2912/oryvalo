@@ -35,3 +35,4 @@ npm run build
 ```
 
 Then deploy the `out/` folder.
+deploy trigger
