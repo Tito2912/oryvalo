@@ -1,6 +1,7 @@
-import type { Post } from '@/lib/types';
+﻿import type { Post } from '@/lib/types';
 
-const BASE_URL = 'https://example.com';
+const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://oryvalo.com').replace(/\/$/, '');
+const BRAND_NAME = 'Oryvalo';
 
 export function buildArticleJsonLd(post: Post) {
   const url = new URL(post.canonical ?? `/${post.slug}`, BASE_URL).toString();
@@ -15,8 +16,8 @@ export function buildArticleJsonLd(post: Post) {
     mainEntityOfPage: url,
     datePublished: published,
     dateModified: modified,
-    author: [{ '@type': 'Person', name: 'Your Brand' }],
-    publisher: { '@type': 'Organization', name: 'Your Brand' },
+    author: [{ '@type': 'Organization', name: BRAND_NAME }],
+    publisher: { '@type': 'Organization', name: BRAND_NAME },
   };
 }
 
