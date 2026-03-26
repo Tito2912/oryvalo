@@ -1,15 +1,20 @@
-import { getAllPosts } from '@/lib/content';
+﻿import { getAllPosts } from '@/lib/content';
 import type { MetadataRoute } from 'next';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://oryvalo.com').replace(/\/$/, '');
   const posts = await getAllPosts();
+  const staticPages = ['/about', '/contact', '/affiliate-disclosure', '/privacy-policy'];
 
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
     },
+    ...staticPages.map((route) => ({
+      url: `${baseUrl}${route}`,
+      lastModified: new Date(),
+    })),
     ...posts.map((p) => ({
       url: `${baseUrl}/${p.slug}`,
       lastModified: new Date(p.updatedAt ?? p.date ?? new Date().toISOString()),
