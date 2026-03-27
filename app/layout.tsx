@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   description:
     "Learn how to make money online using AI tools. Step-by-step guides, tutorials, and software recommendations for beginners and creators.",
   alternates: { canonical: "/" },
+  other: {
+    'impact-site-verification': 'e17f13f7-aee6-40cc-a055-7faff03e24b1',
+  },
   openGraph: {
     type: "website",
     title: "Oryvalo — AI Tools & Online Business Guides",
