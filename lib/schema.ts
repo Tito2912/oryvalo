@@ -1,6 +1,7 @@
-﻿import type { Post } from '@/lib/types';
+import type { Post } from '@/lib/types';
+import { getSiteUrl } from '@/lib/site';
 
-const BASE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://oryvalo.com').replace(/\/$/, '');
+const BASE_URL = getSiteUrl();
 const BRAND_NAME = 'Oryvalo';
 
 export function buildArticleJsonLd(post: Post) {

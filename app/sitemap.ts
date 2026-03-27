@@ -1,8 +1,9 @@
-﻿import { getAllPosts } from '@/lib/content';
+import { getAllPosts } from '@/lib/content';
+import { getSiteUrl } from '@/lib/site';
 import type { MetadataRoute } from 'next';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://oryvalo.com').replace(/\/$/, '');
+  const baseUrl = getSiteUrl();
   const posts = await getAllPosts();
   const staticPages = ['/about', '/contact', '/affiliate-disclosure', '/privacy-policy'];
 
