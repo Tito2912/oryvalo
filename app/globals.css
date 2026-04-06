@@ -15,7 +15,11 @@ a:hover{text-decoration:underline}
 .footer-nav a{color:var(--muted)}
 .hero h1{margin:0;font-size:34px;line-height:1.1}
 .hero p{margin:10px 0 0;color:var(--muted)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.button{display:inline-block;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:#fff;font-weight:700}
+.button.primary{background:var(--link);border-color:var(--link);color:#fff}
 .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+.notice{border:1px solid var(--border);border-radius:14px;padding:14px;background:#fff}
 .muted{color:var(--muted);font-size:14px}
 .list{padding-left:18px}
 .article h1{font-size:34px;line-height:1.15;margin:0 0 10px}
@@ -29,6 +33,7 @@ a:hover{text-decoration:underline}
 .hr{height:1px;background:var(--border);border:0;margin:18px 0}
 .badges{display:flex;gap:8px;flex-wrap:wrap}
 .badge{border:1px solid var(--border);border-radius:999px;padding:4px 10px;font-size:12px;background:#fff;color:var(--muted)}
+.badge a{color:inherit;text-decoration:underline}
 .cta{border:1px solid var(--border);border-radius:14px;padding:14px;background:#fff}
 .cta strong{display:block;margin-bottom:6px}
 .proscons{display:grid;grid-template-columns:1fr;gap:12px}
@@ -37,3 +42,9 @@ a:hover{text-decoration:underline}
 .faq details{border:1px solid var(--border);border-radius:12px;padding:10px 12px;background:#fff}
 .faq details+details{margin-top:10px}
 .faq summary{cursor:pointer;font-weight:700}
+
+/* Cookie banner (GA4 opt-in) */
+.cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;border:1px solid var(--border);background:#fff;border-radius:14px;padding:14px;box-shadow:0 10px 30px rgba(0,0,0,.08);display:flex;gap:14px;align-items:center;justify-content:space-between;z-index:50}
+.cookie-banner p{margin:0;color:var(--muted);font-size:14px}
+.cookie-banner.hidden{display:none}
+.cookie-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}

@@ -1,8 +1,14 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { CookieBanner } from '@/components/CookieBanner';
 import { SiteFooter } from '@/components/SiteFooter';
 import { SiteHeader } from '@/components/SiteHeader';
+import { buildOrganizationJsonLd, buildWebsiteJsonLd } from '@/lib/schema';
 import { getSiteUrl } from '@/lib/site';
+
+function toJsonLd(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, '\\u003c');
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
@@ -37,10 +43,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="alternate" type="application/rss+xml" title="Oryvalo RSS" href="/rss.xml" />
+      </head>
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(buildOrganizationJsonLd()) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(buildWebsiteJsonLd()) }} />
         <SiteHeader />
         <main className="container">{children}</main>
         <SiteFooter />
+        <CookieBanner />
       </body>
     </html>
   );

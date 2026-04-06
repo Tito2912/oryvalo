@@ -8,8 +8,10 @@ export function SiteFooter() {
         <nav className="footer-nav" aria-label="Footer">
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
+          <Link href="/editorial-policy">Editorial Policy</Link>
           <Link href="/affiliate-disclosure">Affiliate Disclosure</Link>
           <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/rss.xml">RSS</Link>
         </nav>
       </div>
     </footer>

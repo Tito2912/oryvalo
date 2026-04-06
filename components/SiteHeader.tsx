@@ -18,8 +18,10 @@ export function SiteHeader() {
         </Link>
 
         <nav className="nav" aria-label="Primary">
-          <Link href="/online-business-ideas">Start here</Link>
-          <Link href="/how-to-start-an-online-business">Roadmap</Link>
+          <Link href="/online-business" data-analytics-event="cta_click" data-analytics-label="Header: Start here">Start here</Link>
+          <Link href="/how-to-start-an-online-business" data-analytics-event="cta_click" data-analytics-label="Header: Roadmap">Roadmap</Link>
+          <Link href="/seo" data-analytics-event="cta_click" data-analytics-label="Header: SEO">SEO</Link>
+          <Link href="/ai-tools" data-analytics-event="cta_click" data-analytics-label="Header: AI tools">AI tools</Link>
         </nav>
 
       </div>

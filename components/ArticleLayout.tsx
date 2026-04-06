@@ -1,20 +1,36 @@
 import Link from 'next/link';
+import { AffiliateDisclosureNotice } from '@/components/AffiliateDisclosureNotice';
 import { TableOfContents } from '@/components/TableOfContents';
 import { FAQ } from '@/components/FAQ';
 import { CTABox } from '@/components/CTABox';
 import type { Post } from '@/lib/types';
 
+function formatDate(input?: string): string | null {
+  if (!input) return null;
+  const ms = Date.parse(input);
+  if (!Number.isFinite(ms)) return null;
+  return new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: 'numeric' }).format(ms);
+}
+
 export function ArticleLayout({ post }: { post: Post }) {
+  const published = formatDate(post.date);
+  const updated = formatDate(post.updatedAt);
+  const showPublished = published && (!updated || post.date !== post.updatedAt);
+
   return (
     <article className="article stack">
       <header>
         <div className="badges">
           <span className="badge">{post.type.toUpperCase()}</span>
+          <span className="badge">By <Link href="/about">Oryvalo</Link></span>
           {post.primaryKeyword ? <span className="badge">KW: {post.primaryKeyword}</span> : null}
-          {post.updatedAt ? <span className="badge">Updated: {new Date(post.updatedAt).toLocaleDateString()}</span> : null}
+          {showPublished ? <span className="badge">Published: {published}</span> : null}
+          {updated ? <span className="badge">Updated: {updated}</span> : null}
         </div>
         <h1>{post.title}</h1>
         <p className="lede">{post.description}</p>
+
+        {post.hasExternalLinks ? <AffiliateDisclosureNotice /> : null}
 
         {post.jumpLinks?.length ? (
           <div className="card">

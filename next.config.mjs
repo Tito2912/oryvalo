@@ -17,10 +17,10 @@ const nextConfig = {
       "frame-ancestors 'none'",
       "object-src 'none'",
       "img-src 'self' data: blob:",
-      "script-src 'self' 'unsafe-inline'",
+      "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://plausible.io https://analytics.umami.is",
       "style-src 'self' 'unsafe-inline'",
       "font-src 'self' data:",
-      "connect-src 'self'",
+      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://*.google-analytics.com https://plausible.io https://analytics.umami.is",
       'upgrade-insecure-requests',
     ].join('; ');
 

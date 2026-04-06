@@ -25,6 +25,12 @@ type Frontmatter = {
   faq?: { q: string; a: string }[];
 };
 
+function hasExternalLinksInMdxSource(mdxSource: string): boolean {
+  const markdownLinkToHttp = /\]\(\s*https?:\/\/[^)\s]+\s*\)/i;
+  const htmlHrefToHttp = /href=["']https?:\/\/[^"']+["']/i;
+  return markdownLinkToHttp.test(mdxSource) || htmlHrefToHttp.test(mdxSource);
+}
+
 function extractHeadingsFromMdxSource(source: string): TocHeading[] {
   const slugger = new GithubSlugger();
   const lines = source.split(/\r?\n/);
@@ -60,7 +66,7 @@ function normalizeHeadingText(input: string): string {
 export async function getAllSlugs(): Promise<string[]> {
   const entries = await fs.readdir(CONTENT_DIR);
   return entries
-    .filter((f) => f.endsWith('.mdx'))
+    .filter((f) => f.endsWith('.mdx') && !f.startsWith('_'))
     .map((f) => f.replace(/\.mdx$/, ''))
     .sort();
 }
@@ -112,6 +118,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   const headings = extractHeadingsFromMdxSource(raw);
   const { content: mdxSource, data } = matter(raw);
   const frontmatter = data as Frontmatter;
+  const hasExternalLinks = hasExternalLinksInMdxSource(mdxSource);
 
   // Build-time compilation of trusted local MDX.
   const compiled = await compileMDX({
@@ -143,6 +150,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     updatedAt: frontmatter.updatedAt,
     canonical: frontmatter.canonical,
     type: frontmatter.type,
+    hasExternalLinks,
     primaryKeyword: frontmatter.primaryKeyword,
     jumpLinks: frontmatter.jumpLinks,
     quickAnswer: frontmatter.quickAnswer,

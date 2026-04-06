@@ -5,7 +5,16 @@ import type { MetadataRoute } from 'next';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = getSiteUrl();
   const posts = await getAllPosts();
-  const staticPages = ['/about', '/contact', '/affiliate-disclosure', '/privacy-policy'];
+  const staticPages = [
+    '/about',
+    '/contact',
+    '/online-business',
+    '/seo',
+    '/ai-tools',
+    '/editorial-policy',
+    '/affiliate-disclosure',
+    '/privacy-policy',
+  ];
 
   return [
     {

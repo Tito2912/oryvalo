@@ -11,6 +11,7 @@ export type Post = {
   updatedAt?: string;
   canonical?: string;
   type: PostType;
+  hasExternalLinks?: boolean;
   primaryKeyword?: string;
   jumpLinks?: { href: string; label: string }[];
   quickAnswer?: string[];
