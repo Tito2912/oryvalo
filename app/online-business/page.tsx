@@ -19,7 +19,9 @@ const FEATURED_SLUGS = [
 export default async function OnlineBusinessHubPage() {
   const posts = await getAllPosts();
   const bySlug = new Map(posts.map((p) => [p.slug, p]));
-  const featured = FEATURED_SLUGS.map((slug) => bySlug.get(slug)).filter(Boolean);
+  const featured = FEATURED_SLUGS.map((slug) => bySlug.get(slug)).filter(
+    (p): p is (typeof posts)[number] => Boolean(p),
+  );
 
   return (
     <article className="stack">
@@ -48,4 +50,3 @@ export default async function OnlineBusinessHubPage() {
     </article>
   );
 }
-
