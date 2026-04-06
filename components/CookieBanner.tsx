@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { AnalyticsEvents } from '@/components/AnalyticsEvents';
 import { getAnalyticsConfig } from '@/lib/analytics';
@@ -90,11 +90,10 @@ function ensureUmamiLoaded(websiteId: string, src: string, domains?: string) {
 export function CookieBanner() {
   const [hidden, setHidden] = useState(true);
   const privacyHref = '/privacy-policy';
-  const analytics = getAnalyticsConfig();
-
-  if (!analytics.enabled) return null;
+  const analytics = useMemo(() => getAnalyticsConfig(), []);
 
   useEffect(() => {
+    if (!analytics.enabled) return;
     try {
       const cookieConsent = getCookie(COOKIE_KEY) as Consent | null;
       if (cookieConsent === 'accepted') {
@@ -122,7 +121,7 @@ export function CookieBanner() {
     } catch {
       setHidden(false);
     }
-  }, []);
+  }, [analytics]);
 
   function set(consent: Consent) {
     try {
@@ -131,13 +130,15 @@ export function CookieBanner() {
     } catch {
       // ignore
     }
-    if (consent === 'accepted') {
+    if (consent === 'accepted' && analytics.enabled) {
       if (analytics.provider === 'ga4') ensureGa4Loaded(analytics.measurementId);
       if (analytics.provider === 'plausible') ensurePlausibleLoaded(analytics.domain, analytics.src);
       if (analytics.provider === 'umami') ensureUmamiLoaded(analytics.websiteId, analytics.src, analytics.domains);
     }
     setHidden(true);
   }
+
+  if (!analytics.enabled) return null;
 
   return (
     <>
