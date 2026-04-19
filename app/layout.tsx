@@ -13,29 +13,29 @@ function toJsonLd(data: unknown): string {
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: "Oryvalo — AI Tools & Online Business Guides",
+    default: "Oryvalo — AI Video Service & AI Tools Guides",
     template: "%s | Oryvalo",
   },
   description:
-    "Learn how to make money online using AI tools. Step-by-step guides, tutorials, and software recommendations for beginners and creators.",
+    "Learn how to start an AI video service and build online income using AI tools. Step-by-step workflows, pricing, outreach, and beginner guides.",
   alternates: { canonical: "/" },
   other: {
     'impact-site-verification': 'e17f13f7-aee6-40cc-a055-7faff03e24b1',
   },
   openGraph: {
     type: "website",
-    title: "Oryvalo — AI Tools & Online Business Guides",
+    title: "Oryvalo — AI Video Service & AI Tools Guides",
     description:
-      "Beginner-friendly tutorials on AI tools, faceless YouTube, automation, and online business ideas.",
+      "Beginner-friendly tutorials on starting an AI video service, choosing tools, pricing packages, and getting clients.",
     url: getSiteUrl(),
     siteName: "Oryvalo",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Oryvalo" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oryvalo — AI Tools & Online Business Guides",
+    title: "Oryvalo — AI Video Service & AI Tools Guides",
     description:
-      "Beginner-friendly tutorials on AI tools, faceless YouTube, automation, and online business ideas.",
+      "Beginner-friendly tutorials on starting an AI video service, choosing tools, pricing packages, and getting clients.",
     images: ["/twitter-image"],
   },
 };

@@ -43,6 +43,7 @@ export default async function OnlineBusinessHubPage() {
       <section className="card">
         <h2>Related topics</h2>
         <ul className="list">
+          <li><Link href="/ai-video">AI video</Link></li>
           <li><Link href="/seo">SEO</Link></li>
           <li><Link href="/ai-tools">AI tools</Link></li>
         </ul>

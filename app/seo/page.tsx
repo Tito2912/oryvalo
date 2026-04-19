@@ -42,6 +42,7 @@ export default async function SeoHubPage() {
       <section className="card">
         <h2>Related topics</h2>
         <ul className="list">
+          <li><Link href="/ai-video">AI video</Link></li>
           <li><Link href="/online-business">Online business</Link></li>
           <li><Link href="/ai-tools">AI tools</Link></li>
         </ul>
