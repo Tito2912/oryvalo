@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Editorial Policy',
   description: 'How Oryvalo writes, reviews, and updates content (and how affiliate links work).',
   alternates: { canonical: '/editorial-policy' },
+  openGraph: { url: '/editorial-policy' },
 };
 
 export default function EditorialPolicyPage() {
