@@ -4,7 +4,7 @@ import { getAllPosts } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'AI Tools',
-  description: 'Practical AI tools and workflows for beginners: content, video, automation, and monetization.',
+  description: 'Practical AI tools and workflows for beginners: create content, generate voice and video, automate tasks, and start monetizing your work.',
   alternates: { canonical: '/ai-tools' },
   openGraph: { url: '/ai-tools' },
 };
