@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Editorial Policy',
-  description: 'How Oryvalo writes, reviews, and updates content (and how affiliate links work).',
+  description: 'How Oryvalo writes, reviews, and updates its content, recommends tools for beginners, and how our affiliate links work transparently.',
   alternates: { canonical: '/editorial-policy' },
   openGraph: { url: '/editorial-policy' },
 };
