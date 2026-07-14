@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Affiliate Disclosure',
-  description: 'How affiliate links work on Oryvalo and how we keep recommendations transparent.',
+  description: 'Learn how affiliate links work on Oryvalo, why they exist, and how we keep our recommendations transparent, honest, and useful for readers.',
   alternates: { canonical: '/affiliate-disclosure' },
   openGraph: { url: '/affiliate-disclosure' },
 };
