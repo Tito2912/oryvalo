@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Affiliate Disclosure',
   description: 'How affiliate links work on Oryvalo and how we keep recommendations transparent.',
   alternates: { canonical: '/affiliate-disclosure' },
+  openGraph: { url: '/affiliate-disclosure' },
 };
 
 export default function AffiliateDisclosurePage() {
