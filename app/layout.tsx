@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Oryvalo — AI Video Service & AI Tools Guides",
     description:
       "Beginner-friendly tutorials on starting an AI video service, choosing tools, pricing packages, and getting clients.",
-    url: getSiteUrl(),
+    url: "/",
     siteName: "Oryvalo",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Oryvalo" }],
   },
