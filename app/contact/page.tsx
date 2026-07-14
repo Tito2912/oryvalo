@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Contact Oryvalo for feedback, corrections, and business inquiries.',
+  description: 'Contact the Oryvalo team for feedback, content corrections, partnership requests, or business inquiries. We read every message and reply promptly.',
   alternates: { canonical: '/contact' },
   openGraph: { url: '/contact' },
 };
