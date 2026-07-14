@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'About',
   description: 'Learn more about Oryvalo, our editorial approach, and how we keep recommendations transparent.',
   alternates: { canonical: '/about' },
-  openGraph: { url: '/about' },
 };
 
 export default function AboutPage() {

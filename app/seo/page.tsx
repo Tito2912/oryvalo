@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   title: 'SEO',
   description: 'Beginner-friendly SEO guides: keyword research, internal linking, and a traffic system that compounds.',
   alternates: { canonical: '/seo' },
-  openGraph: { url: '/seo' },
 };
 
 const FEATURED_SLUGS = [

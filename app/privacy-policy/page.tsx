@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'Read the Oryvalo.com privacy policy: what personal data we collect, how we use cookies and analytics, data retention, and your privacy rights.',
   alternates: { canonical: '/privacy-policy' },
-  openGraph: { url: '/privacy-policy' },
 };
 
 export default function PrivacyPolicyPage() {
