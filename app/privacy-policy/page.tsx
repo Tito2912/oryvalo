@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
-  description: 'Privacy policy for Oryvalo.com (data we collect, cookies, and your rights).',
+  description: 'Privacy policy for Oryvalo.com: learn what data we collect, how we use cookies and analytics, data retention, and your privacy rights.',
   alternates: { canonical: '/privacy-policy' },
   openGraph: { url: '/privacy-policy' },
 };
