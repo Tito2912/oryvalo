@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'AI Tools',
   description: 'Practical AI tools and workflows for beginners: content, video, automation, and monetization.',
   alternates: { canonical: '/ai-tools' },
+  openGraph: { url: '/ai-tools' },
 };
 
 const FEATURED_SLUGS = [
