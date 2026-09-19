@@ -5,6 +5,12 @@ export const metadata: Metadata = {
   title: 'Affiliate Disclosure',
   description: 'Learn how affiliate links work on Oryvalo, why they exist, and how we keep our recommendations transparent, honest, and useful for readers.',
   alternates: { canonical: '/affiliate-disclosure' },
+  openGraph: {
+    type: "website",
+    siteName: "Oryvalo",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Oryvalo" }],
+    url: '/affiliate-disclosure',
+  },
 };
 
 export default function AffiliateDisclosurePage() {
