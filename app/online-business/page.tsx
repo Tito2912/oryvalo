@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Online Business',
   description: 'Beginner roadmaps and checklists to start an online business: ideas, setup, traffic, and monetization.',
   alternates: { canonical: '/online-business' },
+  openGraph: { url: '/online-business' },
 };
 
 const FEATURED_SLUGS = [
