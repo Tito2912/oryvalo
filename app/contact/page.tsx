@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'Contact',
   description: 'Get in touch with Oryvalo for reader feedback, content corrections, partnership questions, and business inquiries. We reply to every message.',
   alternates: { canonical: '/contact' },
+  openGraph: { url: 'https://oryvalo.com/contact', images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Oryvalo" }], type: "website", siteName: "Oryvalo" },
 };
 
 export default function ContactPage() {
