@@ -5,6 +5,12 @@ export const metadata: Metadata = {
   title: 'Editorial Policy',
   description: 'How Oryvalo writes, reviews, and updates its content, recommends tools for beginners, and handles affiliate links transparently.',
   alternates: { canonical: '/editorial-policy' },
+  openGraph: {
+    type: "website",
+    siteName: "Oryvalo",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Oryvalo" }],
+    url: '/editorial-policy',
+  },
 };
 
 export default function EditorialPolicyPage() {

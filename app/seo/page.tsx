@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: 'SEO',
   description: 'Beginner-friendly SEO guides: keyword research, internal linking, and a traffic system that compounds.',
   alternates: { canonical: '/seo' },
+  openGraph: {
+    type: "website",
+    siteName: "Oryvalo",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Oryvalo" }],
+    url: '/seo',
+  },
 };
 
 const FEATURED_SLUGS = [
