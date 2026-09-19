@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: 'AI Tools',
   description: 'Practical AI tools and workflows for beginners: create content, generate voice and video, automate tasks, and start monetizing your work.',
   alternates: { canonical: '/ai-tools' },
+  openGraph: {
+    type: "website",
+    siteName: "Oryvalo",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Oryvalo" }],
+    url: '/ai-tools',
+  },
 };
 
 const FEATURED_SLUGS = [
