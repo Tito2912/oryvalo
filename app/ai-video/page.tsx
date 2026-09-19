@@ -6,6 +6,12 @@ export const metadata: Metadata = {
   title: 'AI Video',
   description: 'AI video workflows and service-business guides: packages, pricing, client outreach, and simple tools for beginners.',
   alternates: { canonical: '/ai-video' },
+  openGraph: {
+    type: "website",
+    siteName: "Oryvalo",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Oryvalo" }],
+    url: '/ai-video',
+  },
 };
 
 const FEATURED_SLUGS = [
