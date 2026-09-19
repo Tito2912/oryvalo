@@ -5,6 +5,12 @@ export const metadata: Metadata = {
   title: 'About',
   description: 'Learn more about Oryvalo, our editorial approach, and how we keep recommendations transparent.',
   alternates: { canonical: '/about' },
+  openGraph: {
+    type: "website",
+    siteName: "Oryvalo",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Oryvalo" }],
+    url: '/about',
+  },
 };
 
 export default function AboutPage() {
