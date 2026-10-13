@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Learn more about Oryvalo, our editorial approach, and how we keep recommendations transparent.',
+  description: 'Learn more about Oryvalo, our editorial approach, our review process, and how we keep recommendations transparent, independent, and genuinely helpful.',
   alternates: { canonical: '/about' },
   openGraph: {
     type: "website",

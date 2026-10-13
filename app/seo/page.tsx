@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { getAllPosts } from '@/lib/content';
 
 export const metadata: Metadata = {
-  title: 'SEO',
+  title: 'SEO Guides: Keyword Research & Internal Linking Tips',
   description: 'Beginner-friendly SEO guides: keyword research, internal linking, and a traffic system that compounds.',
   alternates: { canonical: '/seo' },
   openGraph: {
